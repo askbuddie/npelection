@@ -1,12 +1,24 @@
-# NpElection
+# NpEelction ( Nepal Election )
 
-This is a CLI tool to get your election updates within the comfort of your command line.
+NpElection displays the election data of Nepal right from the comfort of your terminal.
 
 # Installation
 
-- Download the latest release from [GitHub]()
-- Add the downloaded binary to your PATH
-- 
+- Download the latest release as per your system from [Release Page](https://github.com/askbuddie/npelection/releases)
+
+# How to use
+
+once you have release downloaded, exract the zip and run from the relative directory:
+
+```bash
+./npelection
+```
+
+## List candidates
+
+```bash
+./npelection list
+```
 
 # Prerequisites (Build only)
 
