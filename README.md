@@ -6,6 +6,7 @@ NpElection displays the election data of Nepal right from the comfort of your te
 
 - Download the latest release as per your system from the [Releases](https://github.com/askbuddie/npelection/releases) page.
 
+
 # How to use
 
 Once you have downloaded a release file, extract the zip and run from the relative directory:
@@ -14,15 +15,29 @@ Once you have downloaded a release file, extract the zip and run from the relati
 ./npelection
 ```
 
+
+## Add to Path
+
+```bash
+./npelection init
+```
+
+Now, you will be able to use **`npelection`** as a command.
+
+
 ## List candidates
 
 ```bash
 ./npelection list
 ```
 
+> **Note**, you can simply use: **`npelection list`** after doing **`./npelection init`** as mentioned earlier.
+
+
 # Prerequisites (Build only)
 
 - [Go](https://golang.org/doc/install)
+
 
 # Build
 
