@@ -1,14 +1,14 @@
-# NpEelction ( Nepal Election )
+# NpElection ( Nepal Election )
 
 NpElection displays the election data of Nepal right from the comfort of your terminal.
 
 # Installation
 
-- Download the latest release as per your system from [Release Page](https://github.com/askbuddie/npelection/releases)
+- Download the latest release as per your system from the [Releases](https://github.com/askbuddie/npelection/releases) page.
 
 # How to use
 
-once you have release downloaded, exract the zip and run from the relative directory:
+Once you have downloaded a release file, extract the zip and run from the relative directory:
 
 ```bash
 ./npelection
