@@ -1,9 +1,9 @@
 builds:
   - main: .
     binary: npelection
-    id: npelection 
+    id: npelection
 
-    goos: [darwin,linux,windows]
+    goos: [darwin, linux, windows]
     goarch:
       - "386"
       - amd64

@@ -1,10 +1,14 @@
 package cmd
 
 import (
+	"encoding/json"
+	"fmt"
 	"os"
 
 	"github.com/spf13/cobra"
 )
+
+var districtLinkMap map[string]string
 
 var rootCmd = &cobra.Command{
 	Use:   "npelection",
@@ -13,14 +17,10 @@ var rootCmd = &cobra.Command{
 	current year election happening in Nepal.`,
 }
 
-func Execute() {
-  if err := rootCmd.Execute(); err != nil {
-    os.Exit(1)
-  }
+func Execute(data string) {
+	json.Unmarshal([]byte(data), &districtLinkMap)
+	if err := rootCmd.Execute(); err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		os.Exit(1)
+	}
 }
-
-func init() {
-	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
-}
-
-
