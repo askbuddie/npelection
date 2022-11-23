@@ -14,22 +14,22 @@ import (
 func copy(src, dst string) (int64, error) {
 	sourceFileStat, err := os.Stat(src)
 	if err != nil {
-					return 0, err
+		return 0, err
 	}
 
 	if !sourceFileStat.Mode().IsRegular() {
-					return 0, fmt.Errorf("%s is not a regular file", src)
+		return 0, fmt.Errorf("%s is not a regular file", src)
 	}
 
 	source, err := os.Open(src)
 	if err != nil {
-					return 0, err
+		return 0, err
 	}
 	defer source.Close()
 
 	destination, err := os.Create(dst)
 	if err != nil {
-					return 0, err
+		return 0, err
 	}
 	defer destination.Close()
 	nBytes, err := io.Copy(destination, source)
@@ -40,18 +40,17 @@ func copy(src, dst string) (int64, error) {
 var initCmd = &cobra.Command{
 	Use:   "init",
 	Short: "Initialize npelection",
-	Long: `Sends npelection to the preferred path for respective platforms`,
-	Run: func(cmd *cobra.Command, args []string) {
+	Long:  `Sends npelection to the preferred path for respective platforms`,
+	Run: func(_ *cobra.Command, _ []string) {
 		ext, err := os.Executable()
-    if err != nil {
-        panic(err)
-    }
+		if err != nil {
+			panic(err)
+		}
 		fn := filepath.Base(ext)
-    fp := filepath.Clean(ext)
+		fp := filepath.Clean(ext)
 		fd := filepath.Dir(ext)
 
-		r := runtime.GOOS
-		switch r {
+		switch runtime.GOOS {
 		case "windows":
 			cmd := exec.Command("setx", "path", "%path%;"+fd)
 			err := cmd.Run()
