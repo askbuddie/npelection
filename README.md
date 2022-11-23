@@ -22,7 +22,7 @@ Once you have downloaded a release file, extract the zip and run from the relati
 
 Now, you will be able to use **`npelection`** as a command.
 
-## List candidates
+## List districts
 
 ```bash
 ./npelection list
